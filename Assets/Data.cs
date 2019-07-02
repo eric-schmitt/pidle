@@ -17,7 +17,7 @@ public class Data : MonoBehaviour
     public float[] allLevelPercent = new float[] { 0f,0f,0f,0f };
     public int highestLevel;
     public int lives;
-    public int maxLives = 5;
+    public int maxLives = 18;
     public bool blockLevels = true;
 
     private string gameDataFileName = "data.json";
@@ -101,7 +101,7 @@ public class Data : MonoBehaviour
 
     private void LoadGameData()
     {
-        string filePath = Application.dataPath + gameDataFileName;
+        string filePath = Path.Combine(Application.persistentDataPath, gameDataFileName);
 
         if (File.Exists(filePath))
         {
@@ -116,7 +116,7 @@ public class Data : MonoBehaviour
         else
         {
             allLevelPercent = new float[] { 0f, 0f, 0f, 0f };
-            lives = 5;
+            lives = maxLives;
             highestLevel = 1;
         }
     }
@@ -133,7 +133,8 @@ public class Data : MonoBehaviour
 
         string dataAsJson = JsonUtility.ToJson(saveData);
 
-        string filePath = Application.dataPath + gameDataFileName;
+        string filePath = Path.Combine(Application.persistentDataPath, gameDataFileName);
+
         File.WriteAllText(filePath, dataAsJson);
 
     }

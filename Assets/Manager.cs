@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
 
+
 public class Manager : MonoBehaviour {
     
-    private static int lives = 1;
+    private static int lives = 20;
     private static int maxLives;
 
     public int levelNumber;
@@ -67,6 +68,7 @@ public class Manager : MonoBehaviour {
 
     public void Update()
     {
+        
         if(isDead && allowContinue) {
             if (Input.touchCount > 1 || Input.anyKeyDown) {
                 if (lives <= 0)
@@ -176,8 +178,8 @@ public class Manager : MonoBehaviour {
         }
         else if (skipped)
         {
-            addLivesText.text = "+2 (skipped)";
-            lives += 2;
+            addLivesText.text = "+8 (skipped)";
+            lives += 8;
         }
         else 
         {
@@ -202,7 +204,9 @@ public class Manager : MonoBehaviour {
         }
     }
 
-
+    public void CaptureScreenshot() {
+        
+    }
 
 
     // ADS

@@ -88,7 +88,7 @@ public class SwipeDetector : MonoBehaviour
         };
 
         character.Nudge(swipeData.Direction);
-        OnSwipe(swipeData);
+        //OnSwipe(swipeData);
     }
 }
 

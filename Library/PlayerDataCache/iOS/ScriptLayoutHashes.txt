@@ -1,6 +1,6 @@
 iOS
 PlayerPath?
-/Users/ericschmitt/Documents/Work/Other/Piple/Pidle-iOS-Build/Piddle-iOS
+/Users/ericschmitt/Documents/Work/Other/Piple/Pidle-iOS-Buil/Pidle
 SceneListBegin?
 Assets/Scenes/Intro.unity
 Assets/Scenes/LevelSelector.unity

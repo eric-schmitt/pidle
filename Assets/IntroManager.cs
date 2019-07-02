@@ -13,6 +13,7 @@ public class IntroManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
         if (Input.touchCount > 1 || Input.anyKeyDown)
         {
             GameObject dataGO = GameObject.Find("Data");
